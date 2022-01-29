@@ -20,6 +20,6 @@ jobs:
           wget https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.tgz
           unzip ngrok-stable-linux-amd64.tgz
           ./ngrok authtoken 1o79XtSYTbApvdYruCJwpX5kyVJ_4fQ28refmFoEc36iQvgPc
-          ./ngrok tcp 5900
+          ./ngrok tcp 5901
       - name: Ubuntu ready to go 
-        run: sleep 1d
+        run: sleep 100m
