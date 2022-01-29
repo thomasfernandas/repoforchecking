@@ -1,5 +1,6 @@
 sudo apt-get update
 sudo apt-get install xfce4 xfce4-terminal
-wget https://dl.google.com/linux/direct/chrome-remote-desktop_current_amd64.deb
-sudo dpkg -i chrome*
-sudo apt-get install -f
+sudo apt install tigervnc-standalone-server tigervnc-xorg-extension tigervnc-viewer -y
+
+echo -e "123456" >>  ~/.vnc/
+vncserver -depth 32 -geometry 1680x1050
