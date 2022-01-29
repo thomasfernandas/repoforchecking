@@ -16,10 +16,7 @@ jobs:
       - uses: actions/checkout@v2
       - name: Run settting file
         run: |
-          sudo bash ./setting.sh
-          wget https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.tgz
-          unzip ngrok-stable-linux-amd64.tgz
-          ./ngrok authtoken 1o79XtSYTbApvdYruCJwpX5kyVJ_4fQ28refmFoEc36iQvgPc
-          ./ngrok tcp 5901
-      - name: Ubuntu ready to go 
-        run: sleep 100m
+          sudo ls /lib/modules/
+      - name: shell
+        run: |
+           uname -r
