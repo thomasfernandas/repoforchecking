@@ -1,7 +1,14 @@
 name: Ubuntu 20.04
 
 on: 
-
+  workflow_dispatch:
+    inputs:
+      chrome_access_code:
+        description: https://remotedesktop.google.com/headless
+        required: true
+      pin:
+        description: Enter your 6 numbers pin
+        required: true
 jobs:
   build:
     runs-on: ubuntu-20.04
