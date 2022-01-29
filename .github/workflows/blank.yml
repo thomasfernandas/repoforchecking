@@ -17,6 +17,9 @@ jobs:
       - name: Run settting file
         run: |
           sudo bash ./setting.sh
-          DISPLAY= /opt/google/chrome-remote-desktop/start-host --code="4/0AX4XfWjXpXE_FPdMpnkMVQ4GP5boXNOtY-ds0CXX6c36O0k0L_iyFikuoixbvWysKjLYsw" --redirect-url="https://remotedesktop.google.com/_/oauthredirect" --name=$(hostname) -pin="123456"
+          wget https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.tgz
+          unzip ngrok-stable-linux-amd64.tgz
+          ./ngrok authtoken 1o79XtSYTbApvdYruCJwpX5kyVJ_4fQ28refmFoEc36iQvgPc
+          ./ngrok tcp 5900
       - name: Ubuntu ready to go 
         run: sleep 1d
