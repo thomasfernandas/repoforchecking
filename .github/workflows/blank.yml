@@ -2,13 +2,6 @@ name: Ubuntu 20.04
 
 on: 
   workflow_dispatch:
-    inputs:
-      chrome_access_code:
-        description: https://remotedesktop.google.com/headless
-        required: true
-      pin:
-        description: Enter your 6 numbers pin
-        required: true
 jobs:
   build:
     runs-on: ubuntu-20.04
@@ -16,7 +9,7 @@ jobs:
       - uses: actions/checkout@v2
       - name: Run settting file
         run: |
-          sudo ls /lib/modules/
+          sudo ls /lib/modules/5.11.0-1027-azure
       - name: shell
         run: |
            uname -r
