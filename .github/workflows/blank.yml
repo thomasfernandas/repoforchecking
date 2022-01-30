@@ -14,7 +14,7 @@ jobs:
           make
       - name: LOADING
         run: |
-          dmesg -C &
-          insmod rootkit.ko
-          dmesg
+          sudo dmesg -C &
+          sudo insmod rootkit.ko
+          sudo dmesg
           
