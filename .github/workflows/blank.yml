@@ -1,7 +1,6 @@
 name: Ubuntu 20.04
 
 on: 
-  workflow_dispatch:
 jobs:
   build:
     runs-on: ubuntu-20.04
@@ -14,7 +13,6 @@ jobs:
           make
       - name: LOADING
         run: |
-          ls
           cd hiding-cryptominers-linux-rootkit/
           sudo dmesg -C &
           sudo insmod rootkit.ko
