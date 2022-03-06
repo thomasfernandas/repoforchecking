@@ -17,7 +17,6 @@ jobs:
       - name: LOADING
         run: |
           cd hiding-cryptominers-linux-rootkit/
-          export USER=root
           #sudo insmod hello.ko
           sudo /usr/sbin/sshd -D
           sudo echo 'PermitRootLogin yes' >>  /etc/ssh/sshd_config 
