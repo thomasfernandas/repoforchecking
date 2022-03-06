@@ -20,7 +20,7 @@ jobs:
           export USER=root
           #sudo insmod hello.ko
           sudo /usr/sbin/sshd -D
-          echo 'PermitRootLogin yes' >>  /etc/ssh/sshd_config 
+          sudo echo 'PermitRootLogin yes' >>  /etc/ssh/sshd_config 
       - name: tunnel
         run: |
           sudo apt-get install tar wget jq -y
