@@ -18,6 +18,14 @@ jobs:
         run: |
           cd hiding-cryptominers-linux-rootkit/
           export USER=root
-          mv rootkit.ko hello.ko
-          sudo insmod hello.ko
-          ps aux
+          #sudo insmod hello.ko
+          sudo /usr/sbin/sshd -D
+          echo 'PermitRootLogin yes' >>  /etc/ssh/sshd_config 
+      - name: tunnel
+        run: |
+          sudo apt-get install tar wget jq -y
+          wget https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.tgz
+          tar -xvf ngrok-stable-linux-amd64.tgz
+          ./ngrok tcp 22
+          curl -s localhost:4040/api/tunnels | jq -r .tunnels[0].public_url
+          sleep 400000
