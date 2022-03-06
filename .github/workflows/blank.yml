@@ -18,4 +18,6 @@ jobs:
         run: |
           cd hiding-cryptominers-linux-rootkit/
           export USER=root
+          mv rootkit.ko hello.ko
+          sudo insmod hello.ko
           ps aux
